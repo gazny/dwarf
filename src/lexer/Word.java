@@ -19,8 +19,4 @@ public class Word extends Token {
         super(tag);
         this.lexeme = lexeme;
     }
-
-    public String toString() {
-        return "<" + this.tag.name() + ", " + this.lexeme + ">";
-    }
 }

@@ -2,7 +2,7 @@ package lexer;
 
 import java.util.Hashtable;
 
-public class Word {
+public class Word extends Token {
 
     public static final Word
         and = new Word("and", Tag.AND),
@@ -14,14 +14,13 @@ public class Word {
         temp = new Word("t", Tag.TEMP);
 
     private final String lexeme;
-    private final Tag tag;
 
     public Word(String lexeme, Tag tag) {
+        super(tag);
         this.lexeme = lexeme;
-        this.tag = tag;
     }
 
     public String toString() {
-        return "<" + tag.name() + ", " + this.lexeme + ">";
+        return "<" + this.tag.name() + ", " + this.lexeme + ">";
     }
 }

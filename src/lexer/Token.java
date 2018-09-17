@@ -8,6 +8,7 @@ public class Token {
         this.tag = tag;
     }
 
+    @Override
     public String toString() {
         return "<" + tag.name() + ">";
     }
